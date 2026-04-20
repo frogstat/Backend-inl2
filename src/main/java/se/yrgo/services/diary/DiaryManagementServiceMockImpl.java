@@ -8,24 +8,24 @@ import java.util.Set;
 import se.yrgo.domain.Action;
 
 public class DiaryManagementServiceMockImpl implements DiaryManagementService {
-	
-	private Set<Action>allActions= new HashSet<Action>();
 
-	@Override
-	public void recordAction(Action action) {
-		allActions.add(action);
-	}
+    private Set<Action> allActions = new HashSet<Action>();
 
-	public List<Action> getAllIncompleteActions(String requiredUser) {
-		List<Action> incompleteActions = new ArrayList<>();
+    @Override
+    public void recordAction(Action action) {
+        allActions.add(action);
+    }
 
-		for(Action action : allActions) {
-			if(action.getOwningUser().equals(requiredUser) && !action.isComplete()) {
-				incompleteActions.add(action);
-			}
-		}
+    public List<Action> getAllIncompleteActions(String requiredUser) {
+        List<Action> incompleteActions = new ArrayList<>();
 
-		return incompleteActions;
-	}
+        for (Action action : allActions) {
+            if (action.getOwningUser().equals(requiredUser) && !action.isComplete()) {
+                incompleteActions.add(action);
+            }
+        }
+
+        return incompleteActions;
+    }
 
 }

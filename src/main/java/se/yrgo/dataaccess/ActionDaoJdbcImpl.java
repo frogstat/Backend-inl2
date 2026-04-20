@@ -12,20 +12,20 @@ import java.util.List;
 import se.yrgo.domain.Action;
 
 public class ActionDaoJdbcImpl { //implements ActionDao {
-	private static final String DELETE_SQL = "DELETE FROM ACTION WHERE ACTION_ID=?";
-	private static final String UPDATE_SQL = "UPDATE ACTION SET DETAILS=?, COMPLETE=?, OWNING_USER=?, REQUIRED_BY=? WHERE ACTION_ID=?";
-	private static final String INSERT_SQL = "INSERT INTO ACTION (DETAILS, COMPLETE, OWNING_USER, REQUIRED_BY) VALUES (?,?,?,?)";
-	private static final String GET_INCOMPLETE_SQL = "SELECT ACTION_ID, DETAILS, COMPLETE, OWNING_USER, REQUIRED_BY FROM ACTION WHERE OWNING_USER=? AND COMPLETE=?";
+    private static final String DELETE_SQL = "DELETE FROM ACTION WHERE ACTION_ID=?";
+    private static final String UPDATE_SQL = "UPDATE ACTION SET DETAILS=?, COMPLETE=?, OWNING_USER=?, REQUIRED_BY=? WHERE ACTION_ID=?";
+    private static final String INSERT_SQL = "INSERT INTO ACTION (DETAILS, COMPLETE, OWNING_USER, REQUIRED_BY) VALUES (?,?,?,?)";
+    private static final String GET_INCOMPLETE_SQL = "SELECT ACTION_ID, DETAILS, COMPLETE, OWNING_USER, REQUIRED_BY FROM ACTION WHERE OWNING_USER=? AND COMPLETE=?";
 
-	//private JdbcTemplate template;
+    //private JdbcTemplate template;
 
-	//public ActionDaoJdbcImpl(JdbcTemplate template){
-	//	this.template = template;
-	//}
+    //public ActionDaoJdbcImpl(JdbcTemplate template){
+    //	this.template = template;
+    //}
 
-	//public void create(Action newAction) {
-	//	template.update(INSERT_SQL,newAction.getDetails(), newAction.isComplete(),newAction.getOwningUser(),  newAction.getRequiredBy());
-	//}
+    //public void create(Action newAction) {
+    //	template.update(INSERT_SQL,newAction.getDetails(), newAction.isComplete(),newAction.getOwningUser(),  newAction.getRequiredBy());
+    //}
 
 	/* 
 	private void createTables()	{
