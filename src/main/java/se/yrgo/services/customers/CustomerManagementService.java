@@ -8,6 +8,7 @@ import se.yrgo.domain.Customer;
 
 public interface CustomerManagementService {
 
+
     public void newCustomer(Customer newCustomer);
 
 

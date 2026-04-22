@@ -17,7 +17,6 @@ public class CustomerManagementMockImpl implements CustomerManagementService {
         customerMap.put("RM210", new Customer("RM210", "River Ltd", "some more notes"));
     }
 
-
     @Override
     public void newCustomer(Customer newCustomer) {
         if (customerMap.containsKey(newCustomer.getCustomerId())) {
