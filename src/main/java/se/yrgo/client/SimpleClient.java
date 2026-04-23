@@ -26,14 +26,14 @@ public class SimpleClient {
             CallHandlingService callService = container.getBean(CallHandlingService.class);
             DiaryManagementService diaryService = container.getBean(DiaryManagementService.class);
 
-            // I added resetAllData() and clearTables() to the interface so the test can be rerun.
+            // I added resetAllData() to the interface so the test can be rerun.
             customerService.resetAllData();
 
             customerService.newCustomer(new Customer("CS03939", "Acme", "Good Customer"));
 
             Call newCall = new Call("Larry Wall called from Acme Corp");
-            Action action1 = new Action("Call back Larry to ask how things are going", new GregorianCalendar(2016, 0, 0), "rac");
-            Action action2 = new Action("Check our sales dept to make sure Larry is being tracked", new GregorianCalendar(2016, 0, 0), "rac");
+            Action action1 = new Action("Call back Larry to ask how things are going", new GregorianCalendar(2016, GregorianCalendar.JANUARY, 3), "rac");
+            Action action2 = new Action("Check our sales dept to make sure Larry is being tracked", new GregorianCalendar(2016, GregorianCalendar.JANUARY, 8), "rac");
 
             List<Action> actions = new ArrayList<>();
             actions.add(action1);

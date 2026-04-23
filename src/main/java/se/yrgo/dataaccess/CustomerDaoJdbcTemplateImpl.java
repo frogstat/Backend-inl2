@@ -73,7 +73,7 @@ public class CustomerDaoJdbcTemplateImpl implements CustomerDao {
                     customer.getTelephone(),
                     customer.getNotes());
         } catch (DuplicateKeyException e) {
-            throw new CustomerAlreadyExistsException("Customer already exists!");
+            throw new CustomerAlreadyExistsException("Customer: " + customer.getCustomerId() + " already exists!");
         }
     }
 
