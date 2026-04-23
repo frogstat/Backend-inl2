@@ -12,4 +12,6 @@ public interface ActionDao {
     public void update(Action actionToUpdate) throws RecordNotFoundException;
 
     public void delete(Action oldAction) throws RecordNotFoundException;
+
+    public void clearTables();
 }

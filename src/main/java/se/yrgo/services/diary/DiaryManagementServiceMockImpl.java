@@ -27,5 +27,4 @@ public class DiaryManagementServiceMockImpl implements DiaryManagementService {
 
         return incompleteActions;
     }
-
 }

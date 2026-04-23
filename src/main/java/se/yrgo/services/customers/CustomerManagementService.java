@@ -27,6 +27,8 @@ public interface CustomerManagementService {
 
     public Customer getFullCustomerDetail(String customerId) throws CustomerNotFoundException;
 
+    public void resetAllData();
+
 
     public void recordCall(String customerId, Call callDetails) throws CustomerNotFoundException;
 }

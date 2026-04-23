@@ -80,6 +80,11 @@ public class CustomerManagementMockImpl implements CustomerManagementService {
     }
 
     @Override
+    public void resetAllData() {
+
+    }
+
+    @Override
     public void recordCall(String customerId, Call callDetails) throws CustomerNotFoundException {
         Customer customer = customerMap.get(customerId);
         customer.addCall(callDetails);

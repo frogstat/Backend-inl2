@@ -46,6 +46,11 @@ public class ActionDaoJdbcImpl implements ActionDao {
 	public void delete(Action oldAction) throws RecordNotFoundException 	{
 		this.template.update(DELETE_SQL, oldAction.getActionId());
 	}
+
+	@Override
+	public void clearTables() {
+		this.template.update("DELETE FROM ACTION");
+	}
 }
 
 class ActionRowMapper implements RowMapper<Action> {

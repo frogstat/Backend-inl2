@@ -9,6 +9,8 @@ public interface CustomerDao {
 
     public void createTables();
 
+    public void clearTables();
+
     public void create(Customer customer);
 
     public Customer getById(String customerId) throws RecordNotFoundException;
